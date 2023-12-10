@@ -32,7 +32,7 @@ jobs:
 
     - name: Build and push Docker image
       env:
-        ECR_REGISTRY: ${{ secrets.ECR_REGISTRY }}
+        ECR_REGISTRY: "733421399520.dkr.ecr.us-east-1.amazonaws.com"
         ECR_REPOSITORY: "sample" 
         AWS_REGION: "us-east-1"
       run: |
