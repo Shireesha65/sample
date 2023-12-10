@@ -36,7 +36,7 @@ jobs:
         ECR_REPOSITORY: "sample" 
         AWS_REGION: "us-east-1"
       run: |
-        echo $ECR_REGISTRY | docker login -u AWS --password-stdin $ECR_REGISTRY
+        echo $ECR_REGISTRY | docker login --username AWS --password-stdin $ECR_REGISTRY
 
         docker buildx create --use
         docker buildx inspect --bootstrap
